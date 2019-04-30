@@ -216,6 +216,28 @@ const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 const houseSurvivors = (arr) => {
   const survivors = [];
   // Solution code here...
+  Object.values(arr).forEach(a => {
+    let sizeOfHouse = 0;
+
+    sizeOfHouse++;
+
+    if(a.spouse && !deceasedSpouses.includes(a.spouse)) {
+      sizeOfHouse++;
+    }
+
+    if (a.children) {
+      for(let i = 0; i < a.children.length; i++) {
+        sizeOfHouse++;
+      }
+    }
+
+    let houseObject = {
+      house: a.house,
+      members: sizeOfHouse,
+    };
+
+    survivors.push(houseObject);
+  });
 
   return survivors;
 };
