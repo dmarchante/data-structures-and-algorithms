@@ -146,9 +146,7 @@ const totalCharacters = (arr) => {
     }
 
     if (a.children) {
-      for(let i = 0; i < a.children.length; i++) {
-        numberOfEntries++;
-      }
+      numberOfEntries += a.children.length;
     }
   });
 
