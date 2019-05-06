@@ -53,7 +53,7 @@ let starWarsData = [{
 
 const findShortest = (data) => {
   // Solution code here...
-  let shortestCharacter = data.reduce((acc, cur) => parseInt(cur.number) > parseInt(acc.number) ? acc : cur);
+  let shortestCharacter = data.reduce((acc, cur) => parseInt(cur.number) > parseInt(acc.number) ? acc : cur).name;
 
   console.log(shortestCharacter);
 };
