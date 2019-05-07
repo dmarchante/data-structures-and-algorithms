@@ -69,9 +69,12 @@ For example, findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'
 findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>']) returns ['/h1', '/div', '/p'].
 ------------------------------------------------------------------------------------------------ */
 
-const findTagNames = elements => {
-  // Solution code here...
-};
+const findTagNames = elements => elements.map(el => {
+  const re = /<([^\s>]+)(\s|>)+/;
+  const tag = el.match(re)[1];
+  const closingTag = `/${tag}`;
+  return closingTag;
+});
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
