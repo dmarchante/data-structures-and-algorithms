@@ -1,33 +1,15 @@
-const board = [
-  ['#', ' ', '#', ' '],
-  ['#', ' ', '#', ' '],
-  ['#', ' ', ' ', ' '],
-  [' ', ' ', '#', '#'],
-];
+let excelString = '1,1,1\n4,4,4\n9,9,9';
 
 
-const battleship = (board, row, col) => {
+const excel = (str) => {
   // Solution code here...
-  let colCount = 0;
-  let rowCount = 0;
+  let output = str.split('\n');
 
-  let output = board.forEach(a => {
-    console.log(`col: ${colCount}`);
-    colCount++;
+  // let temp = '';
 
-    a.map(hit => {
-      console.log(`row: ${rowCount}`);
-      rowCount++;
+  let outputNew = output.map(a => Array.from(a.split(','))).map(a => a.reduce((a, b) => (parseInt(a) + parseInt(b))));
 
-      if (hit === '#' && row === rowCount && col === colCount) {
-        return 'hit';
-      } else {
-        return 'miss';
-      }
-    });
-  });
-
-  console.log(output);
+  console.log(outputNew);
 };
 
-battleship(board, 5, 6);
+excel(excelString);

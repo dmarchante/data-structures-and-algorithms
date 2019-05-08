@@ -90,6 +90,13 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
+  let location = board[row][col];
+
+  if (location === '#') {
+    return 'hit';
+  } else {
+    return 'miss';
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,6 +109,7 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 
 const calculateProduct = (numbers) => {
   // Solution code here...
+  return numbers.reduce ((a, b) => a.concat(b)).reduce((a, b) => a * b);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,6 +130,10 @@ const weeklyTemperatures = [
 
 const averageDailyTemperature = (weather) => {
   // Solution code here...
+  let temp = weather.map(a => a.reduce((a, b) => (a + b))).reduce((a, b) => a + b);
+  let length = weather.map(a => a.length).reduce((a, b) => a + b);
+
+  return temp / length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,6 +155,7 @@ let lowestWeeklyTemperatureData = [
 
 const lowestWeeklyAverage = (weather) => {
   // Solution code here...
+  return weather.map(a => a.reduce((a, b) => (a + b)) / 7).reduce((acc, cur) => cur > acc ? acc : cur);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -159,6 +172,9 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 
 const excel = (str) => {
   // Solution code here...
+  let output = str.split('\n');
+
+  return output.map(a => Array.from(a.split(','))).map(a => a.reduce((a, b) => (parseInt(a) + parseInt(b))));
 };
 
 /* ------------------------------------------------------------------------------------------------
