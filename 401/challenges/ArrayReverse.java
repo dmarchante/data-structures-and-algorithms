@@ -15,6 +15,7 @@ public class ArrayReverse {
   // the method you should write, to reverse an array
   public static int[] reverseArray(int[] inputArray) {
     // your code goes here!
+    // return Collections.reverse(Arrays.asList(inputArray)); 
     // for now, to make sure that it compiles, here is a bad answer
     return new int[0];
   }
