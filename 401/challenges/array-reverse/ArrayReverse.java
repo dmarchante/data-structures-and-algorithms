@@ -14,14 +14,14 @@ public class ArrayReverse {
 
   // the method you should write, to reverse an array
   public static int[] reverseArray(int[] inputArray) {
-    int[] tempArray = new int[inputArray.length];
+    int[] reversesArray = new int[inputArray.length];
 
     // your code goes here!
     for (int i = inputArray.length - 1; i >= 0; i--)
     {
-      tempArray[inputArray.length - i - 1] = inputArray[i];
+      reversesArray[inputArray.length - i - 1] = inputArray[i];
     }
 
-    return tempArray;
+    return reversesArray;
   }
 }
