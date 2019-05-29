@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eeda4d66-1c91-4d4d-86d6-2f02003bf17d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../whiteboardChallenges/src/main/java/whiteboardChallenges/ArrayShift.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../whiteboardChallenges/src/test/java/whiteboardChallenges/ArrayShiftTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="eeda4d66-1c91-4d4d-86d6-2f02003bf17d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +74,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="22" width="1399" height="878" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
