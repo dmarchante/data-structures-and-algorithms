@@ -1,17 +1,17 @@
-docs
+# File Tree
+## docs
   - assets
     - arrayShift-whiteboard.jpg
   - readme
     - array-shift
       - README.md
-src
+## src
   - main
     - java
       - whiteboardChallenges
-      - ArrayShift.java
-      - Library.java
-      - resources
-test
+        - ArrayShift.java
+        - Library.java
+## test
   - java
     - whiteboardChallenges
       - ArrayShiftTest.java
