@@ -10,10 +10,12 @@
     - java
       - whiteboardChallenges
         - ArrayShift.java
+        - BinarySearch.java
         - Library.java
 ## test
   - java
     - whiteboardChallenges
       - ArrayShiftTest.java
+      - BinarySearchTest.java
       - LibraryTest.java
 
