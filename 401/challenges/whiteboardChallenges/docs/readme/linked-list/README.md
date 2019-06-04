@@ -11,5 +11,14 @@ insert method
   - to add new nodes
 includes method 
   - to check for values in list
-  print method 
-    - to return linked list 
+print method
+  - to return linked list
+append method
+    - add to end of linked list
+insert after method
+    - insert node after given index value
+insert before method
+    0 insert node before given index value
+
+## Whiteboard
+![Linked List Whiteboard](../../assets/linkedList-whiteboard.jpg)
