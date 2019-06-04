@@ -31,7 +31,10 @@ public class LinkedList {
         }
 
         while (currentNode.nextNode != null) {
-            if (currentNode.nextNode.nodeValue == valBefore) {
+            if (currentNode.nodeValue == valBefore) {
+                this.insert(newVal);
+                break;
+            } else if (currentNode.nextNode.nodeValue == valBefore) {
                 currentNode.nextNode = new Node(newVal, currentNode.nextNode);
                 break;
             }
@@ -50,10 +53,14 @@ public class LinkedList {
         while (currentNode.nextNode != null) {
             if (currentNode.nodeValue == valAfter) {
                 currentNode.nextNode = new Node(newVal, currentNode.nextNode);
-                break;
+                return;
             }
 
             currentNode = currentNode.nextNode;
+        }
+
+        if(currentNode.nodeValue == valAfter) {
+            this.append(newVal);
         }
     }
 
