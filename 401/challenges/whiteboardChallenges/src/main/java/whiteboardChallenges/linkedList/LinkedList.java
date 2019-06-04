@@ -5,8 +5,56 @@ import java.util.ArrayList;
 public class LinkedList {
     Node headNode;
 
-    public void insert(int val){
+    public void insert(int val) {
         this.headNode = new Node(val, this.headNode);
+    }
+
+    public void append(int val) {
+        Node currentNode = this.headNode;
+
+        if (this.headNode == null) {
+            currentNode = new Node (val, null );
+        }
+
+        while (currentNode.nextNode != null) {
+            currentNode = currentNode.nextNode;
+        }
+
+        currentNode.nextNode = new Node(val, null);
+    }
+
+    public void insertBefore(int valBefore, int newVal) {
+        Node currentNode = this.headNode;
+
+        if (currentNode == null) {
+            throw new IllegalArgumentException("There is no head value, operation cannot be completed");
+        }
+
+        while (currentNode.nextNode != null) {
+            if (currentNode.nextNode.nodeValue == valBefore) {
+                currentNode.nextNode = new Node(newVal, currentNode.nextNode);
+                break;
+            }
+
+            currentNode = currentNode.nextNode;
+        }
+    }
+
+    public void insertAfter(int valAfter, int newVal) {
+        Node currentNode = this.headNode;
+
+        if (currentNode == null) {
+            throw new IllegalArgumentException("There is no head value, operation cannot be completed");
+        }
+
+        while (currentNode.nextNode != null) {
+            if (currentNode.nodeValue == valAfter) {
+                currentNode.nextNode = new Node(newVal, currentNode.nextNode);
+                break;
+            }
+
+            currentNode = currentNode.nextNode;
+        }
     }
 
     public boolean includes(int value){
@@ -26,7 +74,7 @@ public class LinkedList {
         return false;
     }
 
-    public ArrayList print(){
+    public ArrayList printLinkedList() {
         ArrayList<Integer> nodeOutput = new ArrayList<>();
         Node currentNode = this.headNode;
 

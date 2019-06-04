@@ -9,6 +9,63 @@ import static org.junit.Assert.*;
 
 public class LinkedListTest {
     @Test
+    public void testLinkList_append() {
+        LinkedList libraryForTesting = new LinkedList();
+        libraryForTesting.insert(3);
+        libraryForTesting.insert(6);
+        libraryForTesting.insert(8);
+        libraryForTesting.insert(9);
+        libraryForTesting.append(1);
+
+        ArrayList<Integer> expectedList = new ArrayList<>(Arrays.asList(9, 8, 6, 3, 1));
+        ArrayList<Integer> testList = libraryForTesting.printLinkedList();
+
+        assertEquals(expectedList, testList);
+    }
+
+    @Test
+    public void testLinkList_insertBefore() {
+        LinkedList libraryForTesting = new LinkedList();
+        libraryForTesting.insert(3);
+        libraryForTesting.insert(6);
+        libraryForTesting.insert(8);
+        libraryForTesting.insert(9);
+        libraryForTesting.insertBefore(6, 1);
+
+        ArrayList<Integer> expectedList = new ArrayList<>(Arrays.asList(9, 8, 1, 6, 3));
+        ArrayList<Integer> testList = libraryForTesting.printLinkedList();
+
+        assertEquals(expectedList, testList);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testLinkList_insertBeforeException() {
+        LinkedList libraryForTesting = new LinkedList();
+        libraryForTesting.insertBefore(6, 1);
+    }
+
+    @Test
+    public void testLinkList_insertAfter() {
+        LinkedList libraryForTesting = new LinkedList();
+        libraryForTesting.insert(3);
+        libraryForTesting.insert(6);
+        libraryForTesting.insert(8);
+        libraryForTesting.insert(9);
+        libraryForTesting.insertAfter(6, 1);
+
+        ArrayList<Integer> expectedList = new ArrayList<>(Arrays.asList(9, 8, 6, 1, 3));
+        ArrayList<Integer> testList = libraryForTesting.printLinkedList();
+
+        assertEquals(expectedList, testList);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testLinkList_insertAfterException() {
+        LinkedList libraryForTesting = new LinkedList();
+        libraryForTesting.insertAfter(6, 1);
+    }
+
+    @Test
     public void testLinkList_insertFalse() {
         LinkedList libraryForTesting = new LinkedList();
         libraryForTesting.insert(3);
@@ -43,9 +100,8 @@ public class LinkedListTest {
         libraryForTesting.insert(9);
 
         ArrayList<Integer> expectedList = new ArrayList<>(Arrays.asList(9, 8, 6, 3));
-        ArrayList<Integer> testList = libraryForTesting.print();
+        ArrayList<Integer> testList = libraryForTesting.printLinkedList();
 
-//        assertEquals("something", new ArrayList<Integer>(Arrays.asList(9, 8, 6, 3)), libraryForTesting.print());
         assertEquals(expectedList, testList);
 
     }
