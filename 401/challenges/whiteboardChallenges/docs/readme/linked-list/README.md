@@ -23,5 +23,5 @@ valueAtNthFromEnd
     - return the value from the end of a linked list given an index
 
 ## Whiteboard
-![Linked List Whiteboard](../../assets/linkedList-whiteboard.jpg)
+![Linked List Whiteboard](../../assets/linkedList-whiteBoard.jpg)
 ![Linked List Part 2 Whiteboard](../../assets/linkedListPartTwo-whiteboard.jpg)
