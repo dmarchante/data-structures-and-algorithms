@@ -64,6 +64,33 @@ public class LinkedList {
         }
     }
 
+    public int valueAtNthFromEnd(int index) {
+        Node currentNode = this.headNode;
+        int length = 0;
+
+        if (currentNode == null) {
+            throw new IllegalArgumentException("There is no head value, operation cannot be completed");
+        }
+
+        while (currentNode.nextNode != null) {
+            currentNode = currentNode.nextNode;
+            length++;
+        }
+
+        if (length < index) {
+            throw new IllegalArgumentException("There is value at this index, operation cannot be completed");
+        }
+
+        currentNode = this.headNode;
+
+        for (int i = 1; i < length - index + 1; i++) {
+            currentNode = currentNode.nextNode;
+        }
+
+        return currentNode.nodeValue;
+//        throw new IllegalArgumentException("This index value does not exist, operation cannot be completed");
+    }
+
     public boolean includes(int value){
         Node currentNode = this.headNode;
 

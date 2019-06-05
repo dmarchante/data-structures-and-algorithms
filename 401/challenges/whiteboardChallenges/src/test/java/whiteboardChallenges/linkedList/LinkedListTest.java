@@ -94,6 +94,29 @@ public class LinkedListTest {
     }
 
     @Test
+    public void testLinkedList_valueAtIndex() {
+        int testValue = libraryForTesting.valueAtNthFromEnd(2);
+
+        assertEquals(8, testValue);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testLinkList_valueAtIndexEmptyException() {
+        LinkedList libraryForTesting = new LinkedList();
+        libraryForTesting.valueAtNthFromEnd(1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testLinkList_valueAtIndexHighException() {
+        LinkedList libraryForTesting = new LinkedList();
+        libraryForTesting.insert(3);
+        libraryForTesting.insert(6);
+        libraryForTesting.insert(8);
+        libraryForTesting.insert(9);
+        libraryForTesting.valueAtNthFromEnd(8);
+    }
+
+    @Test
     public void testLinkList_insertFalse() {
         boolean testBoolean = libraryForTesting.includes(4);
 

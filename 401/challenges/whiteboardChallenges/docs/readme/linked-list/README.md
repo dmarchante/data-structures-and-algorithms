@@ -18,7 +18,10 @@ append method
 insert after method
     - insert node after given index value
 insert before method
-    0 insert node before given index value
+    - insert node before given index value
+valueAtNthFromEnd
+    - return the value from the end of a linked list given an index
 
 ## Whiteboard
 ![Linked List Whiteboard](../../assets/linkedList-whiteboard.jpg)
+![Linked List Part 2 Whiteboard](../../assets/linkedListPartTwo-whiteboard.jpg)
