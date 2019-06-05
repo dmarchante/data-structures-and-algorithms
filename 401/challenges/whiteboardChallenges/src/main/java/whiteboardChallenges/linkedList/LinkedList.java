@@ -72,23 +72,22 @@ public class LinkedList {
             throw new IllegalArgumentException("There is no head value, operation cannot be completed");
         }
 
-        while (currentNode.nextNode != null) {
+        while (currentNode != null) {
             currentNode = currentNode.nextNode;
             length++;
         }
 
-        if (length < index) {
+        if (length < index + 1 || index < 0) {
             throw new IllegalArgumentException("There is value at this index, operation cannot be completed");
         }
 
         currentNode = this.headNode;
 
-        for (int i = 1; i < length - index + 1; i++) {
+        for (int i = 0; i < length - index - 1; i++) {
             currentNode = currentNode.nextNode;
         }
 
         return currentNode.nodeValue;
-//        throw new IllegalArgumentException("This index value does not exist, operation cannot be completed");
     }
 
     public boolean includes(int value){

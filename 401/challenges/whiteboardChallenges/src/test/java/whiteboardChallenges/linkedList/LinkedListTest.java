@@ -116,6 +116,16 @@ public class LinkedListTest {
         libraryForTesting.valueAtNthFromEnd(8);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testLinkList_valueAtIndexLowException() {
+        LinkedList libraryForTesting = new LinkedList();
+        libraryForTesting.insert(3);
+        libraryForTesting.insert(6);
+        libraryForTesting.insert(8);
+        libraryForTesting.insert(9);
+        libraryForTesting.valueAtNthFromEnd(-1);
+    }
+
     @Test
     public void testLinkList_insertFalse() {
         boolean testBoolean = libraryForTesting.includes(4);
