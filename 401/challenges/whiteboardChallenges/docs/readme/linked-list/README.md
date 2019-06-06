@@ -25,3 +25,4 @@ valueAtNthFromEnd
 ## Whiteboard
 ![Linked List Whiteboard](../../assets/linkedList-whiteBoard.jpg)
 ![Linked List Part 2 Whiteboard](../../assets/linkedListPartTwo-whiteboard.jpg)
+![Linked List Part 3 Whiteboard](../../assets/linkedListMerge-whiteboard.jpg)
