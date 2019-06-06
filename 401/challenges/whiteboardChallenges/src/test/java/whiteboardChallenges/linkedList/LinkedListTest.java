@@ -2,6 +2,7 @@ package whiteboardChallenges.linkedList;
 
 import org.junit.Before;
 import org.junit.Test;
+import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -138,6 +139,32 @@ public class LinkedListTest {
         boolean testBoolean = libraryForTesting.includes(3);
 
         assertTrue(testBoolean);
+    }
+
+    @Test
+    public void testLinkList_merge() {
+        LinkedList listForTesting = new LinkedList();
+        LinkedList expectedList = new LinkedList();
+        LinkedList one = new LinkedList();
+        LinkedList two = new LinkedList();
+
+        expectedList.insert(3);
+        expectedList.insert(6);
+        expectedList.insert(8);
+        expectedList.insert(9);
+
+        one.insert(9);
+        one.insert(6);
+
+        two.insert(8);
+        two.insert(3);
+
+        LinkedList testList = listForTesting.mergeLists(one, two);
+
+        ArrayList testListPrint = testList.printLinkedList();
+        ArrayList expectedListPrint = expectedList.printLinkedList();
+
+        assertEquals(expectedListPrint, testListPrint);
     }
 
     @Test

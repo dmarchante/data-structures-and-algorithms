@@ -107,6 +107,59 @@ public class LinkedList {
         return false;
     }
 
+    public static LinkedList mergeLists(LinkedList one, LinkedList two) {
+        Node currentNodeOne = one.headNode;
+        Node currentNodeTwo = two.headNode;
+        LinkedList mergedList = new LinkedList();
+        int oneLength = 0;
+        int twoLength = 0;
+
+        if (one == null && two == null) {
+            throw new IllegalArgumentException("There is no head value, operation cannot be completed");
+        }
+
+        if (one == null) {
+            return two;
+        }
+
+        if (two == null) {
+            return one;
+        }
+
+        while (currentNodeOne != null) {
+            currentNodeOne = currentNodeOne.nextNode;
+            oneLength++;
+        }
+
+        while (currentNodeTwo != null) {
+            currentNodeTwo = currentNodeTwo.nextNode;
+            twoLength++;
+        }
+
+        currentNodeOne = one.headNode;
+        currentNodeTwo = two.headNode;
+
+        if (oneLength >= twoLength) {
+            while (currentNodeOne != null) {
+                mergedList.insert(currentNodeTwo.nodeValue);
+                mergedList.insert(currentNodeOne.nodeValue);
+
+                currentNodeOne = currentNodeOne.nextNode;
+                currentNodeTwo = currentNodeTwo.nextNode;
+            }
+        } else {
+            while (currentNodeTwo != null) {
+                mergedList.insert(currentNodeTwo.nodeValue);
+                mergedList.insert(currentNodeOne.nodeValue);
+
+                currentNodeOne = currentNodeOne.nextNode;
+                currentNodeTwo = currentNodeTwo.nextNode;
+            }
+        }
+
+        return mergedList;
+    }
+
     public ArrayList printLinkedList() {
         ArrayList<Integer> nodeOutput = new ArrayList<>();
         Node currentNode = this.headNode;
