@@ -16,6 +16,8 @@
       - [README.md](./docs/readme/linked-list/README.md)
     - mock-interview-part1
       -  [README.md](./docs/readme/mock-interview-part1/README.md)
+    - stacksandqueues
+       -  [README.md](./docs/readme/stacksandqueues/README.md)
 
 ## Code
   - ### Main
@@ -24,6 +26,10 @@
         - Linked List
           - [Linked List](./src/main/java/whiteboardChallenges/linkedList/LinkedList.java)
           - [Node](./src/main/java/whiteboardChallenges/linkedList/Node.java)
+        - Stacks and Queues
+          - [Node](./src/main/java/whiteboardChallenges/stacksandqueues/Node.java)
+          - [Queue](./src/main/java/whiteboardChallenges/stacksandqueues/Queue.java)
+          - [Stack](./src/main/java/whiteboardChallenges/stacksandqueues/Stack.java)
         - [Array Binary Search](./src/main/java/whiteboardChallenges/ArrayBinarySearch.java)
         - [Array Shift](./src/main/java/whiteboardChallenges/ArrayShift.java)
         - [Library](./src/main/java/whiteboardChallenges/Library.java)
@@ -33,6 +39,9 @@
     - Whiteboard Challenges
       - Linked List
         - [Linked List Test Class](./src/test/java/whiteboardChallenges/linkedList/LinkedListTest.java)
+      - Stacks and Queues
+        - [Queue Test](./src/main/java/whiteboardChallenges/stacksandqueues/QueueTest.java)
+        - [Stack Test](./src/main/java/whiteboardChallenges/stacksandqueues/StackTest.java)
       - [Array Binary Search Test](./src/test/java/whiteboardChallenges/ArrayBinarySearchTest.java)
-        - [Array Shift Test](./src/test/java/whiteboardChallenges/ArrayShiftTest.java)
-        - [Library Test](./src/test/java/whiteboardChallenges/LibraryTest.java)
+      - [Array Shift Test](./src/test/java/whiteboardChallenges/ArrayShiftTest.java)
+      - [Library Test](./src/test/java/whiteboardChallenges/LibraryTest.java)
