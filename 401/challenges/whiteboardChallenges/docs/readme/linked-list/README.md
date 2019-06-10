@@ -9,7 +9,7 @@ Create methods per docs then the Linked in constructor. Then created the Node cl
 ## API
 insert method
   - to add new nodes
-includes method 
+includes method
   - to check for values in list
 print method
   - to return linked list
