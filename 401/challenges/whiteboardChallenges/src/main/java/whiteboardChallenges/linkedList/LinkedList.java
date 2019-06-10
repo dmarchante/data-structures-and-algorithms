@@ -13,7 +13,8 @@ public class LinkedList {
         Node currentNode = this.headNode;
 
         if (this.headNode == null) {
-            currentNode = new Node (val, null );
+            this.headNode = new Node (val, null );
+            return;
         }
 
         while (currentNode.nextNode != null) {
@@ -153,6 +154,50 @@ public class LinkedList {
                 mergedList.insert(currentNodeOne.nodeValue);
 
                 currentNodeOne = currentNodeOne.nextNode;
+                currentNodeTwo = currentNodeTwo.nextNode;
+            }
+        }
+
+        return mergedList;
+    }
+
+    public static LinkedList mergeListAlt(LinkedList one, LinkedList two) {
+        Node currentNodeOne = one.headNode;
+        Node currentNodeTwo = two.headNode;
+        LinkedList mergedList = new LinkedList();
+
+        if (one == null && two == null) {
+            throw new IllegalArgumentException("There is no head value, operation cannot be completed");
+        }
+
+        if (one == null) {
+            return two;
+        }
+
+        if (two == null) {
+            return one;
+        }
+
+        while(currentNodeOne != null && currentNodeTwo != null) {
+            mergedList.append(currentNodeOne.nodeValue);
+            mergedList.append(currentNodeTwo.nodeValue);
+
+            currentNodeOne = currentNodeOne.nextNode;
+            currentNodeTwo = currentNodeTwo.nextNode;
+        }
+
+        if (currentNodeOne != null) {
+            while (currentNodeOne != null) {
+                mergedList.append(currentNodeOne.nodeValue);
+
+                currentNodeOne = currentNodeOne.nextNode;
+            }
+        }
+
+        if (currentNodeTwo != null) {
+            while (currentNodeTwo != null) {
+                mergedList.append(currentNodeTwo.nodeValue);
+
                 currentNodeTwo = currentNodeTwo.nextNode;
             }
         }

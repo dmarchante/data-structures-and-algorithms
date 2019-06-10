@@ -168,6 +168,88 @@ public class LinkedListTest {
     }
 
     @Test
+    public void testLinkList_mergeAlt() {
+        LinkedList listForTesting = new LinkedList();
+        LinkedList expectedList = new LinkedList();
+        LinkedList one = new LinkedList();
+        LinkedList two = new LinkedList();
+
+        expectedList.append(9);
+        expectedList.append(8);
+        expectedList.append(6);
+        expectedList.append(3);
+
+        one.append(9);
+        one.append(6);
+
+        two.append(8);
+        two.append(3);
+
+        LinkedList testList = listForTesting.mergeListAlt(one, two);
+
+        ArrayList testListPrint = testList.printLinkedList();
+        ArrayList expectedListPrint = expectedList.printLinkedList();
+
+        assertEquals(expectedListPrint, testListPrint);
+    }
+
+    @Test
+    public void testLinkList_mergeAltLongOne() {
+        LinkedList listForTesting = new LinkedList();
+        LinkedList expectedList = new LinkedList();
+        LinkedList one = new LinkedList();
+        LinkedList two = new LinkedList();
+
+        expectedList.append(4);
+        expectedList.append(8);
+        expectedList.append(5);
+        expectedList.append(3);
+        expectedList.append(7);
+
+        one.append(4);
+        one.append(5);
+        one.append(7);
+
+        two.append(8);
+        two.append(3);
+
+        LinkedList testList = listForTesting.mergeListAlt(one, two);
+
+        ArrayList testListPrint = testList.printLinkedList();
+        ArrayList expectedListPrint = expectedList.printLinkedList();
+
+        assertEquals(expectedListPrint, testListPrint);
+    }
+
+    @Test
+    public void testLinkList_mergeAltLongTwo() {
+        LinkedList listForTesting = new LinkedList();
+        LinkedList expectedList = new LinkedList();
+        LinkedList one = new LinkedList();
+        LinkedList two = new LinkedList();
+
+        expectedList.append(4);
+        expectedList.append(8);
+        expectedList.append(5);
+        expectedList.append(3);
+        expectedList.append(7);
+
+        one.append(4);
+        one.append(5);
+
+        two.append(8);
+        two.append(3);
+        one.append(7);
+
+        LinkedList testList = listForTesting.mergeListAlt(one, two);
+
+        ArrayList testListPrint = testList.printLinkedList();
+        ArrayList expectedListPrint = expectedList.printLinkedList();
+
+        assertEquals(expectedListPrint, testListPrint);
+    }
+
+    @Test
     public void testLinkList_print() {
         ArrayList<Integer> expectedList = new ArrayList<>(Arrays.asList(9, 8, 6, 3));
         ArrayList<Integer> testList = libraryForTesting.printLinkedList();
