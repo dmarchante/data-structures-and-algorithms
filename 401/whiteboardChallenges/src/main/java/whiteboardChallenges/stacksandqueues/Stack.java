@@ -5,6 +5,7 @@ public class Stack {
 
     public Node pop() {
         Node tempNode;
+
         if (this.topNode == null) {
             throw new IllegalArgumentException("There is no top value, operation cannot be completed");
         }
@@ -12,10 +13,12 @@ public class Stack {
         if (this.topNode.nextNode == null) {
             tempNode = this.topNode;
             this.topNode = null;
+
             return tempNode;
         } else {
             tempNode = this.topNode;
             this.topNode = this.topNode.nextNode;
+
             return tempNode;
         }
     }

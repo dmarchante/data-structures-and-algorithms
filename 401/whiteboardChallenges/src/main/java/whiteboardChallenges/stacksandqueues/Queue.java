@@ -2,25 +2,23 @@ package whiteboardChallenges.stacksandqueues;
 
 public class Queue {
     Node frontNode;
+    Node backNode;
 
     public void enqueue(int val) {
-        Node tempNode;
+        Node tempNode = new Node(val, null);
 
         if (this.frontNode == null) {
-            this.frontNode = new Node (val, null );
+            this.frontNode = tempNode;
+        } else {
+            this.backNode.nextNode = tempNode;
         }
 
-        while (this.frontNode.nextNode != null) {
-            this.frontNode = this.frontNode.nextNode;
-        }
-
-        tempNode = this.frontNode;
-        this.frontNode = new Node(val, null);
-        this.frontNode.nextNode = tempNode;
+        this.backNode = tempNode;
     }
 
     public Node dequeue() {
         Node tempNode;
+
         if (this.frontNode == null) {
             throw new IllegalArgumentException("There is no top value, operation cannot be completed");
         }
@@ -28,11 +26,13 @@ public class Queue {
         if (this.frontNode.nextNode == null) {
             tempNode = this.frontNode;
             this.frontNode = null;
+
             return tempNode;
         } else {
             tempNode = this.frontNode;
             this.frontNode = this.frontNode.nextNode;
             tempNode.nextNode = null;
+
             return tempNode;
         }
     }
