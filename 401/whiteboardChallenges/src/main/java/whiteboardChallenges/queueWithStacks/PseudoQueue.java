@@ -13,33 +13,24 @@ public class PseudoQueue<T> {
     }
 
     public T dequeue() {
-        T tempStack = null;
+        T rearVal;
 
         if (this.stackOne.isEmpty()) {
             throw new IllegalArgumentException("There is no top value, operation cannot be completed");
         }
 
-        if (this.stackTwo.isEmpty()) {
-            while (!stackOne.isEmpty()) {
-                stackTwo.push(stackOne.pop());
-            }
+        while (!stackOne.isEmpty()) {
+            stackTwo.push(stackOne.pop());
         }
 
-        if (!this.stackTwo.isEmpty()) {
-            tempStack = this.stackTwo.pop();
-            size--;
+        rearVal = this.stackTwo.pop();
+
+        while (!stackTwo.isEmpty()) {
+            stackOne.push(stackTwo.pop());
         }
 
-        return tempStack;
+        return rearVal;
     }
-
-//    public int size() {
-//        return size;
-//    }
-//
-//    public boolean isEmpty() {
-//        return size == 0;
-//    }
 
     public PseudoQueue() {
         stackOne = new Stack<>();

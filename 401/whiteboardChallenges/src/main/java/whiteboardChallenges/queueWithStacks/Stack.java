@@ -37,10 +37,7 @@ public class Stack<T> {
             return this.topNode.nodeValue;
         }
     }
-
-//    public int size() {
-//        return  size;
-//    }
+    
 
     public boolean isEmpty() {
         return size == 0;
