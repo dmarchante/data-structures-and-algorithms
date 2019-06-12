@@ -1,11 +1,11 @@
-package whiteboardChallenges.queueWithStacks;
+package whiteboardChallenges.fifoAnimalShelter;
 
-public class Stack<T> {
-    private Node<T> topNode;
+public class AnimalStack<T> {
+    private Animal<T> topNode;
     private int size;
 
     public void push (T val) {
-        Node<T> newNode = new Node(val);
+        Animal<T> newNode = new Animal(val);
 
         if (this.topNode == null) {
             this.topNode = newNode;
@@ -22,7 +22,7 @@ public class Stack<T> {
             throw new IllegalArgumentException("There is no top value, operation cannot be completed");
         }
 
-        T newNode = this.topNode.nodeValue;
+        T newNode = this.topNode.animalSpecies;
         this.topNode = this.topNode.nextNode;
 
         size --;
@@ -34,7 +34,7 @@ public class Stack<T> {
         if (this.topNode == null) {
             throw new IllegalArgumentException("There is no top value, operation cannot be completed");
         } else {
-            return this.topNode.nodeValue;
+            return this.topNode.animalSpecies;
         }
     }
 
@@ -42,17 +42,16 @@ public class Stack<T> {
         return size == 0;
     }
 
-    public Stack() {
+    public AnimalStack() {
         topNode = null;
     }
 
-    public class Node<T> {
-        T nodeValue;
-        Node<T> nextNode;
+    public class Animal<T> {
+        T animalSpecies;
+        Animal<T> nextNode;
 
-        public Node(T value) {
-
-            this.nodeValue = value;
+        public Animal(T value) {
+            this.animalSpecies = value;
         }
     }
 }

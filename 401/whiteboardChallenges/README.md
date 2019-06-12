@@ -12,6 +12,8 @@
       - [README.md](./docs/readme/array-binary-search/README.md)
     - array-shift
       - [README.md](./docs/readme/array-shift/README.md)
+    - fifoAnimalShelter
+      - [README.md](./docs/readme/fifoAnimalShelter/README.md)
     - linked-list
       - [README.md](./docs/readme/linked-list/README.md)
     - queueWithStacks
@@ -25,6 +27,9 @@
   - ### Main
     - Java
       - Whiteboard Challenges
+        - Animal Shelter
+           - [Animal Shelter](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalShelter.java)
+           - [Animal Stack](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalStack.java)
         - Linked List
           - [Linked List](./src/main/java/whiteboardChallenges/linkedList/LinkedList.java)
           - [Node](./src/main/java/whiteboardChallenges/linkedList/Node.java)
@@ -42,6 +47,8 @@
   - ### Test
     - Java
     - Whiteboard Challenges
+      - Animal Shelter
+        - [Animal Shelter Test](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalShelterTest.java)
       - Linked List
         - [Linked List Test Class](./src/test/java/whiteboardChallenges/linkedList/LinkedListTest.java)
         - Queues with Stacks
