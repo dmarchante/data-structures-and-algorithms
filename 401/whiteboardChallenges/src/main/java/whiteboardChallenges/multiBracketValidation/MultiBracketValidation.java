@@ -10,6 +10,7 @@ public class MultiBracketValidation {
         brackets.put('[', ']');
         brackets.put('{', '}');
 
+        // https://stackoverflow.com/questions/23187539/java-balanced-expressions-check/23187733
         Stack<Character> bracketStack = new Stack();
         for (char character: input.toCharArray()) {
             if (brackets.containsKey(character)) {
