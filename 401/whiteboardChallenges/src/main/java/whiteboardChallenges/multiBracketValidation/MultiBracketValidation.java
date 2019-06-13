@@ -14,8 +14,10 @@ public class MultiBracketValidation {
         for (char character: input.toCharArray()) {
             if (brackets.containsKey(character)) {
                 bracketStack.push(brackets.get(character));
-            } else if (bracketStack.isEmpty() || character != bracketStack.pop()){
-                return false;
+            } else if (brackets.containsValue(character)) {
+                if (bracketStack.isEmpty() || character != bracketStack.pop()) {
+                    return false;
+                }
             }
         }
         return bracketStack.isEmpty();

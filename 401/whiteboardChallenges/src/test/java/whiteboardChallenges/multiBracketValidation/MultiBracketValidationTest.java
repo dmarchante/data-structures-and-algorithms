@@ -16,19 +16,19 @@ public class MultiBracketValidationTest {
     @Test
     public void testValidation_balanced() {
         MultiBracketValidation testValidation = new MultiBracketValidation();
-        String bracketStringOne = "()";
+        String bracketStringOne = "(a)";
         String bracketStringTwo = "{()}";
         String bracketStringThree = "[{()}]";
 
         assertEquals(testValidation.multiBracketValidation(bracketStringOne), true);
-//        assertEquals(testValidation.multiBracketValidation(bracketStringTwo), true);
-//        assertEquals(testValidation.multiBracketValidation(bracketStringThree), true);
+        assertEquals(testValidation.multiBracketValidation(bracketStringTwo), true);
+        assertEquals(testValidation.multiBracketValidation(bracketStringThree), true);
     }
 
     @Test
     public void testValidation_unbalanced() {
         MultiBracketValidation testValidation = new MultiBracketValidation();
-        String bracketStringOne = "{[()";
+        String bracketStringOne = "{[(i]y)}";
         String bracketStringTwo = "[()]}";
 
         assertEquals(testValidation.multiBracketValidation(bracketStringOne), false);
