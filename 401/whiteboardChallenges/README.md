@@ -40,6 +40,10 @@
           - [Node](./src/main/java/whiteboardChallenges/stacksandqueues/Node.java)
           - [Queue](./src/main/java/whiteboardChallenges/stacksandqueues/Queue.java)
           - [Stack](./src/main/java/whiteboardChallenges/stacksandqueues/Stack.java)
+        - Trees
+          - [Binary Search Tree](./src/main/java/whiteboardChallenges/tree/BinarySearchTree.java)
+          - [Binary Tree](./src/main/java/whiteboardChallenges/tree/BinaryTree.java)
+          - [Node](./src/main/java/whiteboardChallenges/tree/Node.java)
         - [Array Binary Search](./src/main/java/whiteboardChallenges/ArrayBinarySearch.java)
         - [Array Shift](./src/main/java/whiteboardChallenges/ArrayShift.java)
         - [Library](./src/main/java/whiteboardChallenges/Library.java)
@@ -57,6 +61,8 @@
       - Stacks and Queues
         - [Queue Test](./src/main/java/whiteboardChallenges/stacksandqueues/QueueTest.java)
         - [Stack Test](./src/main/java/whiteboardChallenges/stacksandqueues/StackTest.java)
-      - [Array Binary Search Test](./src/test/java/whiteboardChallenges/ArrayBinarySearchTest.java)
+      - Trees
+        - [Binary Search Tree Test](./src/main/java/whiteboardChallenges/tree/BinarySearchTree.java)
+        - [Binary Tree Test](./src/main/java/whiteboardChallenges/tree/BinaryTree.java)
       - [Array Shift Test](./src/test/java/whiteboardChallenges/ArrayShiftTest.java)
       - [Library Test](./src/test/java/whiteboardChallenges/LibraryTest.java)
