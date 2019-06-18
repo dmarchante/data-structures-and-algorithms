@@ -2,6 +2,7 @@ package whiteboardChallenges.tree;
 
 public class BinarySearchTree<T extends Comparable<T>> {
     Node rootNode;
+
     public void add(T value) {
         Node<T> newNode = new Node<>(value);
 
@@ -22,7 +23,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         } else if (n.getNodeValue().compareTo(val) > 0) {
             n = addHelper(val, n.getLeftNode());
         } else {
-            System.out.println("Node with the same value already exists in the BST");
+            System.out.println("Node with the same value already exists in this BST");
         }
 
         return n;
