@@ -1,6 +1,6 @@
 package whiteboardChallenges.tree;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class BinaryTree<T> {
     private Node<T> rootNode;
@@ -33,6 +33,18 @@ public class BinaryTree<T> {
         }
 
         return arrayList;
+    }
+
+    // https://www.geeksforgeeks.org/level-order-tree-traversal/
+    public String breadthFirst(BinaryTree<T> binaryTree) {
+        Queue<Node<T>> treeQueue = new LinkedList<>();
+
+
+        if (binaryTree == null) {
+            throw new IllegalArgumentException("There is no root value, operation cannot be completed");
+        }
+
+        return breadthFirstHelper(treeQueue, binaryTree);
     }
 
     private void inPreorderHelper(Node<T> n, ArrayList<T> arrayList) {
@@ -71,9 +83,30 @@ public class BinaryTree<T> {
         arrayList.add(n.getNodeValue());
     }
 
-    public BinaryTree() {
-        this.setRootNode(null);
+    // https://www.geeksforgeeks.org/level-order-tree-traversal/
+    public String breadthFirstHelper(Queue<Node<T>> queue, BinaryTree<T> binaryTree) {
+        StringBuilder s = new StringBuilder();
+        queue.add(binaryTree.getRootNode());
+
+        while (!queue.isEmpty()) {
+            Node<T> n = queue.peek();
+
+            if (n != null) {
+                s.append(n.getNodeValue() + " ");
+                queue.remove();
+
+                if (n.getLeftNode() != null)
+                    queue.add(n.getLeftNode());
+
+                if (n.getRightNode() != null)
+                    queue.add(n.getRightNode());
+            }
+        }
+
+        return s.toString();
     }
+
+    public BinaryTree() { this.setRootNode(null); }
 
     public void setRootNode (Node<T> rootNode) {
         this.rootNode = rootNode;

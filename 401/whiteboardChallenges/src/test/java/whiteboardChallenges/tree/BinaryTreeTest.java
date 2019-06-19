@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 
 public class BinaryTreeTest<T> {
     public BinaryTree<T> binaryTree;
+    public BinaryTree<T> binaryTreeNull;
 
     @Before
     public void setBinaryTree() {
@@ -45,5 +46,15 @@ public class BinaryTreeTest<T> {
     @Test
     public void binaryTreeTest_postOrder() {
         assertEquals(new ArrayList<>(Arrays.asList(4, 5, 2, 6, 7, 3, 1)), this.binaryTree.postOrder());
+    }
+
+    @Test
+    public void binaryTreeTest_breadth() {
+        assertEquals("1 2 3 4 5 6 7 ", this.binaryTree.breadthFirst(binaryTree));
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void binaryTreeTest_null() {
+        assertEquals("1 2 3 4 5 6 7 ", this.binaryTree.breadthFirst(binaryTreeNull));
     }
 }

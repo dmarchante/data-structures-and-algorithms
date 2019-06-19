@@ -1,7 +1,7 @@
 package whiteboardChallenges.tree;
 
 public class BinarySearchTree<T extends Comparable<T>> {
-    Node rootNode;
+    Node<T> rootNode;
 
     public void add(T value) {
         Node<T> newNode = new Node<>(value);
@@ -15,7 +15,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     private Node<T> addHelper(T val, Node<T> n) {
         if (n == null) {
-            return new Node<>(val);
+            return new Node<T>(val);
         }
 
         if (n.getNodeValue().compareTo(val) < 0) {
