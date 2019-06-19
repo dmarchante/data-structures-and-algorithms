@@ -1,7 +1,7 @@
 package whiteboardChallenges.fizzBuzzTree;
 
-import whiteboardChallenges.tree.BinaryTree;
 import whiteboardChallenges.tree.Node;
+import whiteboardChallenges.tree.BinaryTree;
 
 public class FizzBuzzTree {
 //    private BinaryTree<String> binaryTree = new BinaryTree<>();
