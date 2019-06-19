@@ -21,3 +21,6 @@ breadthSearch method
 add method
 
 contains method
+
+## Whiteboard
+![Breadth Search Whiteboard](../../assets/breadthSearch-whiteBoard.jpg)
