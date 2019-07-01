@@ -28,13 +28,9 @@ Describe in detail how the algorithm works. Include small code snippets to possi
 
 ## Readings and References
 ### Watch
-
-Video
+(Insertion Sort Video)[https://www.youtube.com/watch?v=OGzPmgsI-pQ]
 
 ###Read
 
-Article 1
-Article 2
-Bookmark
-
-Website
+(Article 1)[https://www.baeldung.com/java-insertion-sort]
+(Article 2) [https://www.geeksforgeeks.org/insertion-sort/]
