@@ -4,6 +4,8 @@
   - ### Assets
     - [ArrayShift Whiteboard](./docs/assets/arrayShift-whiteboard.jpg)
     - [BinarySearch Whiteboard](./docs/assets/binarySearch-whiteboard.jpg)
+    - [FizzBuzz Whiteboard](./docs/assets/fizzBuzzTree-whiteboard.jpg)
+    - [InsertionSort Whiteboard](./docs/assets/insertionSort-whiteboard.jpg)
     - [Mock Interview One Assessment](./docs/assets/mockInterview1-assessment.jpg)
     - [Mock Interview One Whiteboard](./docs/assets/mockInterview1-whiteboard.jpg)
 
@@ -14,6 +16,8 @@
       - [README.md](./docs/readme/array-shift/README.md)
     - fifoAnimalShelter
       - [README.md](./docs/readme/fifoAnimalShelter/README.md)
+    - fizBuzzTree
+      - [README.md](./docs/readme/fizzBuzzTree/README.md)
     - linked-list
       - [README.md](./docs/readme/linked-list/README.md)
     - queueWithStacks
@@ -30,6 +34,8 @@
         - Animal Shelter
            - [Animal Shelter](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalShelter.java)
            - [Animal Stack](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalStack.java)
+        - Fizz Buzz Tree
+           - [Fizz Buzz Tree](./src/main/java/whiteboardChallenges/fizzBuzzTre/FizzBuzzTree.java)
         - Linked List
           - [Linked List](./src/main/java/whiteboardChallenges/linkedList/LinkedList.java)
           - [Node](./src/main/java/whiteboardChallenges/linkedList/Node.java)
@@ -53,6 +59,8 @@
     - Whiteboard Challenges
       - Animal Shelter
         - [Animal Shelter Test](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalShelterTest.java)
+      - Fizz Buzz Tree
+         - [Fizz Buzz Tree Test](./src/main/java/whiteboardChallenges/fizzBuzzTre/FizzBuzzTreeTest.java)
       - Linked List
         - [Linked List Test Class](./src/test/java/whiteboardChallenges/linkedList/LinkedListTest.java)
         - Queues with Stacks
