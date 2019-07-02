@@ -7,13 +7,13 @@ By splitting an array with a merge sort we can reduce the time complexity of an 
 To learn how to write a method that sorts an array with merge sort.
 
 ## Visual Representation
-![Merge Sort Visual Diagram](../../assets/mergeSortVisual.jpg)
+![Merge Sort Visual Diagram](../../assets/mergeSortVisual.png)
 
 ## Algorithm
-![Merge Algorithm](../../assets/mergeSortAlgo.jpg)
+![Merge Algorithm](../../assets/mergeSortAlgo.png)
 
 ## Pseudocode
-![Merge Pseudocode](../../assets/mergeSortPsuedo.jpg)
+![Merge Pseudocode](../../assets/mergeSortPsuedo.png)
 
 
 ## Readings and References
