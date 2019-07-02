@@ -18,8 +18,12 @@
       - [README.md](./docs/readme/fifoAnimalShelter/README.md)
     - fizBuzzTree
       - [README.md](./docs/readme/fizzBuzzTree/README.md)
+    - insertionSort
+      - [README.md](./docs/readme/insertionSort/README.md)
     - linked-list
       - [README.md](./docs/readme/linked-list/README.md)
+    - mergeSort
+      - [README.md](./docs/readme/mergeSort/README.md)
     - queueWithStacks
       - [README.md](./docs/readme/queueWithStacks/README.md)
     - mock-interview-part1
@@ -36,6 +40,8 @@
            - [Animal Stack](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalStack.java)
         - Fizz Buzz Tree
            - [Fizz Buzz Tree](./src/main/java/whiteboardChallenges/fizzBuzzTre/FizzBuzzTree.java)
+        - Sort
+           - [Sort](./src/main/java/whiteboardChallenges/sort/Sort.java)
         - Linked List
           - [Linked List](./src/main/java/whiteboardChallenges/linkedList/LinkedList.java)
           - [Node](./src/main/java/whiteboardChallenges/linkedList/Node.java)
@@ -61,6 +67,8 @@
         - [Animal Shelter Test](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalShelterTest.java)
       - Fizz Buzz Tree
          - [Fizz Buzz Tree Test](./src/main/java/whiteboardChallenges/fizzBuzzTre/FizzBuzzTreeTest.java)
+      - Sort
+        - [Sort](./src/main/java/whiteboardChallenges/sort/SortTest.java)
       - Linked List
         - [Linked List Test Class](./src/test/java/whiteboardChallenges/linkedList/LinkedListTest.java)
         - Queues with Stacks
