@@ -85,5 +85,44 @@ public class Sort {
         return arr;
     }
 
+    public List<Integer> quickSort(List<Integer> arr, int left, int right) {
+        if (arr == null) {
+            throw new IllegalArgumentException("Array has no value, operation cannot be completed");
+        }
+
+        if (left < right) {
+            int position = partition(arr, left, right);
+
+            quickSort(arr, left, position - 1);
+            quickSort(arr, position + 1, right);
+        }
+
+        return arr;
+    }
+
+    private int partition(List<Integer> arr, int left, int right) {
+        int pivot = arr.get(right);
+        int low = left - 1;
+
+        for (int i = left; i <= right - 1; i ++) {
+            if (arr.get(i) <= pivot) {
+                low++;
+                swap(arr, i , low);
+            }
+        }
+
+        swap(arr, right, low + 1);
+
+        return low + 1;
+    }
+
+    private void swap(List<Integer> arr, int i, int low) {
+        int temp;
+
+        temp = arr.get(i);
+        arr.set(i, arr.get(low));
+        arr.set(low, temp);
+    }
+
     public Sort() {}
 }
