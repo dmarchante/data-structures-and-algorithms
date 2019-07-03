@@ -2,7 +2,7 @@
 This is an algorithm that takes in an unsorted array and sorts it.
 
 ## Learning Objectives
-To learn how to write a method that sorts an array with merquicke sort.
+To learn how to write a method that sorts an array with quick sort.
 
 ## Visual Representation
 ![Merge Sort Visual Diagram](../../assets/quickSort-visual.png)
