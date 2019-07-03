@@ -14,69 +14,6 @@ public class SortTest {
     List<Integer> arrCheck = new ArrayList<>();
 
     @Test
-    public void testMergeSort() {
-        this.arr.add(9);
-        this.arr.add(7);
-        this.arr.add(6);
-        this.arr.add(5);
-        this.arr.add(8);
-        this.arr.add(4);
-
-        this.arrCheck.add(4);
-        this.arrCheck.add(5);
-        this.arrCheck.add(6);
-        this.arrCheck.add(7);
-        this.arrCheck.add(8);
-        this.arrCheck.add(9);
-
-        List<Integer> arrayActual = this.sortClass.mergeSort(arr);
-
-        assertEquals(this.arrCheck, arrayActual);
-    }
-
-    @Test
-    public void testMergeSort_sameValues() {
-        this.arr.add(5);
-        this.arr.add(5);
-        this.arr.add(5);
-        this.arr.add(5);
-
-        this.arrCheck.add(5);
-        this.arrCheck.add(5);
-        this.arrCheck.add(5);
-        this.arrCheck.add(5);
-
-        List<Integer> arrayActual = this.sortClass.mergeSort(arr);
-
-        assertEquals(this.arrCheck, arrayActual);
-    }
-
-    @Test
-    public void testMergeSort_one() {
-        this.arr.add(5);
-        this.arrCheck.add(5);
-
-        List<Integer> arrayActual = this.sortClass.mergeSort(arr);
-
-        assertEquals(this.arrCheck, arrayActual);
-    }
-
-    @Test
-    public void testMergeSort_empty() {
-        List<Integer> arrayActual = this.sortClass.mergeSort(arr);
-
-        assertEquals(this.arr, arrayActual);
-    }
-
-    @Test (expected = IllegalArgumentException.class)
-    public void testMergeSort_null() {
-        this.arr = null;
-        List<Integer> arrayActual = this.sortClass.mergeSort(arr);
-
-        assertEquals(this.arr, arrayActual);
-    }
-
-    @Test
     public void testInsertionSort() {
         int[] arr = new int[] {3, 1, 7, 8, 5};
         int[] arrCheck = new int[] {1, 3, 5, 7, 8};
@@ -115,5 +52,131 @@ public class SortTest {
         int[] arrayActual = this.sortClass.insertionSort(arrNull);
 
         assertArrayEquals(arrNull, arrayActual);
+    }
+
+    @Test
+    public void testMergeSort() {
+        this.arr.add(9);
+        this.arr.add(7);
+        this.arr.add(6);
+        this.arr.add(5);
+        this.arr.add(8);
+        this.arr.add(4);
+
+        this.arrCheck.add(4);
+        this.arrCheck.add(5);
+        this.arrCheck.add(6);
+        this.arrCheck.add(7);
+        this.arrCheck.add(8);
+        this.arrCheck.add(9);
+
+        List<Integer> arrayActual = this.sortClass.mergeSort(this.arr);
+
+        assertEquals(this.arrCheck, arrayActual);
+    }
+
+    @Test
+    public void testMergeSort_sameValues() {
+        this.arr.add(5);
+        this.arr.add(5);
+        this.arr.add(5);
+        this.arr.add(5);
+
+        this.arrCheck.add(5);
+        this.arrCheck.add(5);
+        this.arrCheck.add(5);
+        this.arrCheck.add(5);
+
+        List<Integer> arrayActual = this.sortClass.mergeSort(this.arr);
+
+        assertEquals(this.arrCheck, arrayActual);
+    }
+
+    @Test
+    public void testMergeSort_one() {
+        this.arr.add(5);
+        this.arrCheck.add(5);
+
+        List<Integer> arrayActual = this.sortClass.mergeSort(this.arr);
+
+        assertEquals(this.arrCheck, arrayActual);
+    }
+
+    @Test
+    public void testMergeSort_empty() {
+        List<Integer> arrayActual = this.sortClass.mergeSort(this.arr);
+
+        assertEquals(this.arr, arrayActual);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testMergeSort_null() {
+        this.arr = null;
+        List<Integer> arrayActual = this.sortClass.mergeSort(this.arr);
+
+        assertEquals(this.arr, arrayActual);
+    }
+
+    @Test
+    public void testQuickSort() {
+        this.arr.add(9);
+        this.arr.add(7);
+        this.arr.add(6);
+        this.arr.add(5);
+        this.arr.add(8);
+        this.arr.add(4);
+
+        this.arrCheck.add(4);
+        this.arrCheck.add(5);
+        this.arrCheck.add(6);
+        this.arrCheck.add(7);
+        this.arrCheck.add(8);
+        this.arrCheck.add(9);
+
+        List<Integer> arrayActual = this.sortClass.quickSort(this.arr, 0, this.arr.size() - 1);
+
+        assertEquals(this.arrCheck, arrayActual);
+    }
+
+    @Test
+    public void testQuickSort_sameValues() {
+        this.arr.add(5);
+        this.arr.add(5);
+        this.arr.add(5);
+        this.arr.add(5);
+
+        this.arrCheck.add(5);
+        this.arrCheck.add(5);
+        this.arrCheck.add(5);
+        this.arrCheck.add(5);
+
+        List<Integer> arrayActual = this.sortClass.quickSort(this.arr, 0, this.arr.size() - 1);
+
+        assertEquals(this.arrCheck, arrayActual);
+    }
+
+    @Test
+    public void testQuickSort_one() {
+        this.arr.add(5);
+        this.arrCheck.add(5);
+
+        List<Integer> arrayActual = this.sortClass.quickSort(this.arr, 0, this.arr.size() - 1);
+
+        assertEquals(this.arrCheck, arrayActual);
+    }
+
+    @Test
+    public void testQuickSort_empty() {
+        List<Integer> arrayActual = this.sortClass.quickSort(this.arr, 0, this.arr.size() - 1);
+
+        assertEquals(this.arr, arrayActual);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testQuickSort_null() {
+        this.arr = null;
+        List<Integer> arrayActual = this.sortClass.quickSort(this.arr, 0, 0);
+
+        assertEquals(this.arr, arrayActual);
     }
 }

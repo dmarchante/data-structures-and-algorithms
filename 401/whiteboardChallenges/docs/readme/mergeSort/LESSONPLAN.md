@@ -20,7 +20,7 @@ To learn how to write a method that sorts an array with merge sort.
 ### Watch
 (Merge Sort Video)[https://www.youtube.com/watch?v=JSceec-wEyw]
 
-###Read
+### Read
 
 (Article 1)[https://www.geeksforgeeks.org/merge-sort/]
 (Article 2) [https://www.baeldung.com/java-merge-sort]
