@@ -10,11 +10,11 @@ public class HashTableTest {
     public void testHashTableSet() {
         HashTable ht = new HashTable(5);
 
-        ht.set("David", "Father");
-        ht.set("Tiziana", "Mother");
-        ht.set("Sarah", "Daughter");
-        ht.set("Yaelle", "Daughter");
-        ht.set("Frosty", "Pet");
+        ht.add("David", "Father");
+        ht.add("Tiziana", "Mother");
+        ht.add("Sarah", "Daughter");
+        ht.add("Yaelle", "Daughter");
+        ht.add("Frosty", "Pet");
 
         String htActual = ht.get("David");
 
@@ -25,8 +25,8 @@ public class HashTableTest {
     public void testHashTableCollision() {
         HashTable ht = new HashTable(1);
 
-        ht.set("David", "Father");
-        ht.set("Tiziana", "Mother");
+        ht.add("David", "Father");
+        ht.add("Tiziana", "Mother");
 
         String htActual = ht.get("David");
 
@@ -37,11 +37,35 @@ public class HashTableTest {
     public void testHashTableNull() {
         HashTable ht = new HashTable(1);
 
-        ht.set("David", "Father");
-        ht.set("Tiziana", "Mother");
+        ht.add("David", "Father");
+        ht.add("Tiziana", "Mother");
 
         String htActual = ht.get("Sam");
 
         assertEquals(null, htActual);
+    }
+
+    @Test
+    public void testHashTableContainsTrue() {
+        HashTable ht = new HashTable(1);
+
+        ht.add("David", "Father");
+        ht.add("Tiziana", "Mother");
+
+        boolean htActual = ht.contains("Tiziana");
+
+        assertTrue(htActual);
+    }
+
+    @Test
+    public void testHashTableContainsFalse() {
+        HashTable ht = new HashTable(1);
+
+        ht.add("David", "Father");
+        ht.add("Tiziana", "Mother");
+
+        boolean htActual = ht.contains("Sam");
+
+        assertFalse(htActual);
     }
 }
