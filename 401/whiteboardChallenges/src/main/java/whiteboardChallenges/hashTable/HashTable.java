@@ -68,7 +68,7 @@ public class HashTable<K, V> {
         return null;
     }
 
-    public void set(String key, String value) {
+    public void add(String key, String value) {
         int hashKey = hash(key);
 
         if (bucket[hashKey] == null) {
