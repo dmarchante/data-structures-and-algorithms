@@ -15,25 +15,25 @@
     - array-shift
       - [README.md](./docs/readme/array-shift/README.md)
     - fifoAnimalShelter
-      - [README.md](./docs/readme/fifoAnimalShelter/README.md)
+      - [README.md](./docs/readme/fifo-animal-shelter/README.md)
     - fizBuzzTree
-      - [README.md](./docs/readme/fizzBuzzTree/README.md)
+      - [README.md](./docs/readme/fizz-buzz-tree/README.md)
     - hashTable
-      - [README.md](./docs/readme/hashTable/README.md)
+      - [README.md](./docs/readme/hash-table/README.md)
     - insertionSort
-      - [README.md](./docs/readme/insertionSort/README.md)
+      - [README.md](./docs/readme/insertion-sort/README.md)
     - linked-list
       - [README.md](./docs/readme/linked-list/README.md)
     - mergeSort
-      - [README.md](./docs/readme/mergeSort/README.md)
+      - [README.md](./docs/readme/merge-sort/README.md)
     - queueWithStacks
-      - [README.md](./docs/readme/queueWithStacks/README.md)
+      - [README.md](./docs/readme/queue-with-stacks/README.md)
     - repeatedWords
-      - [README.md](./docs/readme/repeatedWords/README.md)
+      - [README.md](./docs/readme/repeated-ords/README.md)
     - mock-interview-part1
       - [README.md](./docs/readme/mock-interview-part1/README.md)
     - stacksandqueues
-       - [README.md](./docs/readme/stacksandqueues/README.md)
+       - [README.md](./docs/readme/stacks-queues/README.md)
 
 ## Code
   - ### Main

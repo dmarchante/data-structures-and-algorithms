@@ -7,7 +7,6 @@ public class RepeatedWords {
     public String repeatedWord(String str) {
         String[] words = str.replaceAll("[^a-zA-Z ]", "").toLowerCase().split(" ");
         Map<String, Integer> wordMap = new HashMap<>();
-        String foundRepeat = new String();
 
         for (String word : words) {
             if (wordMap.containsKey(word)){
