@@ -28,6 +28,8 @@
       - [README.md](./docs/readme/mergeSort/README.md)
     - queueWithStacks
       - [README.md](./docs/readme/queueWithStacks/README.md)
+    - repeatedWords
+      - [README.md](./docs/readme/repeatedWords/README.md)
     - mock-interview-part1
       - [README.md](./docs/readme/mock-interview-part1/README.md)
     - stacksandqueues
@@ -53,6 +55,8 @@
         - Queues with Stacks
           - [Psuedo Queue](./src/main/java/whiteboardChallenges/queueWithStacks/PseudoQueue.java)
           - [Stack](./src/main/java/whiteboardChallenges/queueWithStacks/Stack.java)
+        - Repeated Word
+          - [Repeated Word](./src/main/java/whiteboardChallenges/repeatedWords/RepeatedWords.java)
         - Stacks and Queues
           - [Node](./src/main/java/whiteboardChallenges/stacksandqueues/Node.java)
           - [Queue](./src/main/java/whiteboardChallenges/stacksandqueues/Queue.java)
@@ -84,6 +88,8 @@
       - Stacks and Queues
         - [Queue Test](./src/main/java/whiteboardChallenges/stacksandqueues/QueueTest.java)
         - [Stack Test](./src/main/java/whiteboardChallenges/stacksandqueues/StackTest.java)
+      - Repeated Word
+        - [Repeated Word Test](./src/main/java/whiteboardChallenges/repeatedWords/RepeatedWords.java)
       - Trees
         - [Binary Search Tree Test](./src/main/java/whiteboardChallenges/tree/BinarySearchTree.java)
         - [Binary Tree Test](./src/main/java/whiteboardChallenges/tree/BinaryTree.java)
