@@ -39,7 +39,6 @@ public class BinaryTree<T> {
     public String breadthFirst(BinaryTree<T> binaryTree) {
         Queue<Node<T>> treeQueue = new LinkedList<>();
 
-
         if (binaryTree == null) {
             throw new IllegalArgumentException("There is no root value, operation cannot be completed");
         }
