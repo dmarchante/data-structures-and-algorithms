@@ -6,6 +6,7 @@
     - [BinarySearch Whiteboard](./docs/assets/binarySearch-whiteboard.jpg)
     - [FizzBuzz Whiteboard](./docs/assets/fizzBuzzTree-whiteboard.jpg)
     - [InsertionSort Whiteboard](./docs/assets/insertionSort-whiteboard.jpg)
+    - [LeftJoin Whiteboard](./docs/assets/leftJoin-whiteboard.jpg)
     - [Mock Interview One Assessment](./docs/assets/mockInterview1-assessment.jpg)
     - [Mock Interview One Whiteboard](./docs/assets/mockInterview1-whiteboard.jpg)
 
@@ -22,6 +23,8 @@
       - [README.md](./docs/readme/hash-table/README.md)
     - insertionSort
       - [README.md](./docs/readme/insertion-sort/README.md)
+    - leftJoin
+      - [README.md](./docs/readme/left-join/README.md)
     - linked-list
       - [README.md](./docs/readme/linked-list/README.md)
     - mergeSort
@@ -49,6 +52,8 @@
            - [Hash Node](./src/main/java/whiteboardChallenges/fizzBuzzTre/HashNode.java)
         - Sort
            - [Sort](./src/main/java/whiteboardChallenges/sort/Sort.java)
+        - Left Join
+           - [Left Join](./src/main/java/whiteboardChallenges/sort/LeftJoin.java)
         - Linked List
           - [Linked List](./src/main/java/whiteboardChallenges/linkedList/LinkedList.java)
           - [Node](./src/main/java/whiteboardChallenges/linkedList/Node.java)
@@ -80,6 +85,8 @@
          - [Hash Table Test](./src/main/java/whiteboardChallenges/fizzBuzzTre/HashTable.java)
       - Sort
         - [Sort](./src/main/java/whiteboardChallenges/sort/SortTest.java)
+      - Left Join Test
+        - [Left Join Test](./src/main/java/whiteboardChallenges/sort/LeftJoinTest.java)
       - Linked List
         - [Linked List Test Class](./src/test/java/whiteboardChallenges/linkedList/LinkedListTest.java)
         - Queues with Stacks
