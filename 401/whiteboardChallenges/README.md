@@ -19,6 +19,8 @@
       - [README.md](./docs/readme/fifo-animal-shelter/README.md)
     - fizBuzzTree
       - [README.md](./docs/readme/fizz-buzz-tree/README.md)
+    - graph
+      - [README.md](./docs/readme/graph/README.md)
     - hashTable
       - [README.md](./docs/readme/hash-table/README.md)
     - insertionSort
@@ -47,6 +49,8 @@
            - [Animal Stack](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalStack.java)
         - Fizz Buzz Tree
            - [Fizz Buzz Tree](./src/main/java/whiteboardChallenges/fizzBuzzTre/FizzBuzzTree.java)
+        - Graph
+            - [Graph](./src/main/java/whiteboardChallenges/graph/Graph.java)
         - Hash Table
            - [Hash Table](./src/main/java/whiteboardChallenges/fizzBuzzTre/HashTable.java)
            - [Hash Node](./src/main/java/whiteboardChallenges/fizzBuzzTre/HashNode.java)
@@ -81,6 +85,8 @@
         - [Animal Shelter Test](./src/main/java/whiteboardChallenges/fifoAnimalShelter/AnimalShelterTest.java)
       - Fizz Buzz Tree
          - [Fizz Buzz Tree Test](./src/main/java/whiteboardChallenges/fizzBuzzTre/FizzBuzzTreeTest.java)
+      - Graph Tree
+         - [Graph](./src/main/java/whiteboardChallenges/graph/GraphTree.java)
       - Hash Table Test
          - [Hash Table Test](./src/main/java/whiteboardChallenges/fizzBuzzTre/HashTable.java)
       - Sort
