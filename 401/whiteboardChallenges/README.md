@@ -5,6 +5,7 @@
     - [ArrayShift Whiteboard](./docs/assets/arrayShift-whiteboard.jpg)
     - [BinarySearch Whiteboard](./docs/assets/binarySearch-whiteboard.jpg)
     - [FizzBuzz Whiteboard](./docs/assets/fizzBuzzTree-whiteboard.jpg)
+    - [Graph Breadth First Whiteboard](./docs/assets/graphBreadthFirst-whiteboard.jpg)    
     - [InsertionSort Whiteboard](./docs/assets/insertionSort-whiteboard.jpg)
     - [LeftJoin Whiteboard](./docs/assets/leftJoin-whiteboard.jpg)
     - [Mock Interview One Assessment](./docs/assets/mockInterview1-assessment.jpg)
