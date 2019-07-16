@@ -8,13 +8,14 @@ Set up the Node with the required variables
 
 ## API
 
-### GRAPH
+### Graph
 addGraphNode
 addEdge
 getNeighbors
 size
 getGraphNodes
 setGraphNodes
+breadthFirst
 
 ### Graph Node
 addNeighbor
@@ -22,3 +23,6 @@ getLabel
 setLabel
 getNeighbors
 setNeighbors
+
+## Whitboard
+![Graph Breadth First Whiteboard](./docs/assets/graphBreadthFirst-whiteboard.jpg)

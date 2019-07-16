@@ -3,6 +3,7 @@ package whiteboardChallenges.graph;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.Assert.*;
@@ -37,5 +38,12 @@ public class GraphTest {
         Set<GraphNode> amount = graph.getNeighbors(graph.getGraphNodes().get(0));
 
         assertEquals(2, amount.size());
+    }
+
+    @Test
+    public void testGraph_breadthFirst() {
+        List amount = graph.breadthFirst(graph.getGraphNodes().get(0));
+
+        System.out.println(amount.size());
     }
 }

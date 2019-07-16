@@ -1,7 +1,6 @@
 package whiteboardChallenges.graph;
 
-import java.util.ArrayList;
-import java.util.Set;
+import java.util.*;
 
 public class Graph {
     private ArrayList<GraphNode> graphNodes;
@@ -32,6 +31,36 @@ public class Graph {
 
     public void setGraphNodes(ArrayList<GraphNode> graphNodes) {
         this.graphNodes = graphNodes;
+    }
+
+    public List breadthFirst(GraphNode graphNode) {
+        List orderList = new ArrayList();
+        Set visited = new HashSet();
+        Queue queue = new PriorityQueue();
+
+        queue.add(graphNode);
+
+        while(!queue.isEmpty()) {
+            GraphNode nodeDeque = (GraphNode) queue.remove();
+            visited.add(nodeDeque);
+            orderList.add(nodeDeque);
+
+            Iterator neighbors = nodeDeque.getNeighbors().iterator();
+
+//            for(int i = 0; i < neighbors.size(); i ++){
+//                if(visited.contains(neighbors[i])){
+//                    queue.add(neighbors[i]);
+//                }
+//            }
+
+            while(neighbors.hasNext()) {
+                if(visited.contains(neighbors.next())){
+                    queue.add(neighbors.next());
+                }
+            }
+        }
+
+        return orderList;
     }
 
     Graph () {
