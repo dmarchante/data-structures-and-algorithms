@@ -16,6 +16,7 @@ size
 getGraphNodes
 setGraphNodes
 breadthFirst
+flightDestination
 
 ### Graph Node
 addNeighbor
