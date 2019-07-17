@@ -4,10 +4,10 @@ import java.util.*;
 
 public class GraphNode {
     private String label;
-    private Set<GraphNode> neighbors;
+    private Map<GraphNode, Integer> neighbors;
 
-    public void addNeighbor(GraphNode graphNode) {
-        this.neighbors.add(graphNode);
+    public void addNeighbor(GraphNode graphNode, Integer weight) {
+        this.neighbors.put(graphNode, weight);
     }
 
     public String getLabel() {
@@ -18,16 +18,16 @@ public class GraphNode {
         this.label = label;
     }
 
-    public Set<GraphNode> getNeighbors() {
+    public Map<GraphNode, Integer> getNeighbors() {
         return neighbors;
     }
 
-    public void setNeighbors(Set<GraphNode> neighbors) {
+    public void setNeighbors(Map<GraphNode, Integer> neighbors) {
         this.neighbors = neighbors;
     }
 
     GraphNode(String label) {
         this.setLabel(label);
-        this.neighbors = new HashSet<>();
+        this.neighbors = new HashMap<>();
     }
 }
