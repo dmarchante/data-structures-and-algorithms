@@ -47,26 +47,39 @@ public class GraphTest {
     public void testGraph_breadthFirst() {
         ArrayList<String> nodeActual = graph.breadthFirst(graph.getGraphNodes().get(0));
         ArrayList<String> nodeExpected = new ArrayList<>();
-        nodeExpected.add("Monstropolis");
-        nodeExpected.add("Arendelle");
-        nodeExpected.add("Pandora");
-        nodeExpected.add("Metroville");
         nodeExpected.add("Naboo");
+        nodeExpected.add("Arendelle");
+        nodeExpected.add("Monstropolis");
+        nodeExpected.add("Metroville");
+        nodeExpected.add("Pandora");
         nodeExpected.add("Narnia");
 
-        assertEquals(nodeActual, nodeExpected);
+        assertEquals(nodeExpected, nodeActual);
     }
 
     @Test
     public void testGraph_flights() {
-        String expected = "true, 82";
+        String expected = "True, $42";
         ArrayList<String> destinations = new ArrayList<>();
         destinations.add("Naboo");
-        destinations.add("Pandora");
+        destinations.add("Monstropolis");
 
         String actual = graph.directFlights(destinations);
 
-        System.out.println(actual);
+        assertEquals(expected, actual);
+    }
 
+    @Test
+    public void testGraph_depth() {
+        ArrayList<String> nodeActual = graph.depthFirst(graph.getGraphNodes().get(0));
+        ArrayList<String> nodeExpected = new ArrayList<>();
+        nodeExpected.add("Monstropolis");
+        nodeExpected.add("Naboo");
+        nodeExpected.add("Pandora");
+        nodeExpected.add("Arendelle");
+        nodeExpected.add("Metroville");
+        nodeExpected.add("Narnia");
+
+        assertEquals(nodeExpected, nodeActual);
     }
 }

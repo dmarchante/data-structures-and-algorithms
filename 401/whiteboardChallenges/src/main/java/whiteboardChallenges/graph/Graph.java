@@ -60,6 +60,33 @@ public class Graph {
         return orderList;
     }
 
+    public ArrayList<String> depthFirst(GraphNode graphNode) {
+        ArrayList<String> orderList = new ArrayList<>();
+        HashSet<GraphNode> visited = new HashSet<>();
+        Stack<GraphNode> stack = new Stack<>();
+
+        stack.add(graphNode);
+
+        while(!stack.isEmpty()) {
+            GraphNode nodeDeque = stack.pop();
+            visited.add(nodeDeque);
+
+            HashMap<GraphNode, Integer> neighbors = nodeDeque.getNeighbors();
+
+            for(GraphNode neighbor : neighbors.keySet()) {
+                if(!visited.contains(neighbor)) {
+                    stack.add(neighbor);
+                }
+            }
+        }
+
+        for (GraphNode node : visited) {
+            orderList.add(node.getLabel());
+        }
+
+        return orderList;
+    }
+
     public String directFlights (ArrayList<String> destinations) {
         ArrayList<GraphNode> graph = this.getGraphNodes();
         HashSet<String> graphValues = new HashSet<>();
