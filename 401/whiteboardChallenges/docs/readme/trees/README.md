@@ -17,6 +17,8 @@ postOrder method
 
 breadthSearch method
 
+findMax method
+
 ### Binary Search Tree
 add method
 
@@ -24,3 +26,4 @@ contains method
 
 ## Whiteboard
 ![Breadth Search Whiteboard](../../assets/breadthSearch-whiteBoard.jpg)
+![Find Max](../../assets/findMax-whiteBoard.jpg)

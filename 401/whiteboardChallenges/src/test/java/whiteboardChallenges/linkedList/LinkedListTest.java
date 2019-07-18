@@ -2,7 +2,6 @@ package whiteboardChallenges.linkedList;
 
 import org.junit.Before;
 import org.junit.Test;
-import sun.awt.image.ImageWatched;
 
 import java.util.ArrayList;
 import java.util.Arrays;

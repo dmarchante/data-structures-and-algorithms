@@ -4,7 +4,9 @@ import java.util.*;
 
 public class GraphNode {
     private String label;
+
     private HashMap<GraphNode, Integer> neighbors;
+
 
     public void addNeighbor(GraphNode graphNode, Integer weight) {
         this.neighbors.put(graphNode, weight);
@@ -23,6 +25,7 @@ public class GraphNode {
     }
 
     public void setNeighbors(HashMap<GraphNode, Integer> neighbors) {
+
         this.neighbors = neighbors;
     }
 

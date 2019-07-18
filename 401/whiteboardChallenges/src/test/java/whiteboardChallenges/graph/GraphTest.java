@@ -69,5 +69,4 @@ public class GraphTest {
         System.out.println(actual);
 
     }
-
 }

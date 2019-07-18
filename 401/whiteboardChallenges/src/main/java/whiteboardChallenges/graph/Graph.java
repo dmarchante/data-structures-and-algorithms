@@ -43,7 +43,6 @@ public class Graph {
         while(!queue.isEmpty()) {
             GraphNode nodeDeque = queue.remove();
             visited.add(nodeDeque);
-//            orderList.add(nodeDeque);
 
             HashMap<GraphNode, Integer> neighbors = nodeDeque.getNeighbors();
 

@@ -9,10 +9,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
         rootNode = addHelper(value, newNode);
     }
 
-    public boolean contains(T value) {
-        return this.containsHelper(value, this.getRoot());
-    }
-
     private Node<T> addHelper(T val, Node<T> n) {
         if (n == null) {
             return new Node<T>(val);
@@ -27,6 +23,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
 
         return n;
+    }
+
+    public boolean contains(T value) {
+        return this.containsHelper(value, this.getRoot());
     }
 
     private boolean containsHelper(T val, Node<T> n) {

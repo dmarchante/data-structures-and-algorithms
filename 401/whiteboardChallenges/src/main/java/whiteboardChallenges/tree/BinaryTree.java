@@ -39,12 +39,26 @@ public class BinaryTree<T> {
     public String breadthFirst(BinaryTree<T> binaryTree) {
         Queue<Node<T>> treeQueue = new LinkedList<>();
 
-
         if (binaryTree == null) {
             throw new IllegalArgumentException("There is no root value, operation cannot be completed");
         }
 
         return breadthFirstHelper(treeQueue, binaryTree);
+    }
+
+    public static Integer findMaxValue(Node<Integer> root) {
+        Integer maxValue = root.getNodeValue();
+
+        if (root.getNodeValue() != null) {
+            if (root.getLeftNode() != null) {
+                maxValue = Math.max(maxValue, findMaxValue(root.getLeftNode()));
+            }
+
+            if (root.getRightNode() != null) {
+                maxValue = Math.max(maxValue, findMaxValue(root.getRightNode()));
+            }
+        }
+        return maxValue;
     }
 
     private void inPreorderHelper(Node<T> n, ArrayList<T> arrayList) {
