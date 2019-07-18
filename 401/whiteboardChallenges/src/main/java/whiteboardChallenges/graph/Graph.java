@@ -17,7 +17,7 @@ public class Graph {
         graphNodeTwo.addNeighbor(graphNodeOne, weight);
     }
 
-    public Map<GraphNode, Integer> getNeighbors(GraphNode graphNode) {
+    public HashMap<GraphNode, Integer> getNeighbors(GraphNode graphNode) {
         return graphNode.getNeighbors();
     }
 
@@ -33,35 +33,32 @@ public class Graph {
         this.graphNodes = graphNodes;
     }
 
-//    public List breadthFirst(GraphNode graphNode) {
-//        List orderList = new ArrayList();
-//        Set visited = new HashSet();
-//        Queue queue = new PriorityQueue();
-//
-//        queue.add(graphNode);
-//
-//        while(!queue.isEmpty()) {
-//            GraphNode nodeDeque = (GraphNode) queue.remove();
-//            visited.add(nodeDeque);
-//            orderList.add(nodeDeque);
+    public ArrayList<String> breadthFirst(GraphNode graphNode) {
+        ArrayList<String> orderList = new ArrayList<>();
+        HashSet<GraphNode> visited = new HashSet<>();
+        Queue<GraphNode> queue = new LinkedList<>();
 
-//            Iterator neighbors = nodeDeque.getNeighbors();
+        queue.add(graphNode);
 
-//            for(int i = 0; i < neighbors.size(); i ++){
-//                if(visited.contains(neighbors[i])){
-//                    queue.add(neighbors[i]);
-//                }
-//            }
+        while(!queue.isEmpty()) {
+            GraphNode nodeDeque = queue.remove();
+            visited.add(nodeDeque);
 
-//            while(neighbors.hasNext()) {
-//                if(visited.contains(neighbors.next())){
-//                    queue.add(neighbors.next());
-//                }
-//            }
-//        }
-//
-//        return orderList;
-//    }
+            HashMap<GraphNode, Integer> neighbors = nodeDeque.getNeighbors();
+
+            for(GraphNode neighbor : neighbors.keySet()) {
+                if(!visited.contains(neighbor)) {
+                    queue.add(neighbor);
+                }
+            }
+        }
+
+        for (GraphNode node : visited) {
+            orderList.add(node.getLabel());
+        }
+
+        return orderList;
+    }
 
     public String directFlights (ArrayList<String> destinations) {
         ArrayList<GraphNode> graph = this.getGraphNodes();
@@ -89,11 +86,11 @@ public class Graph {
             }
 
             if (!canTravel) {
-                return "false, 0";
+                return "False, $" + cost;
             }
         }
 
-        return "true" + cost;
+        return "True, $" + cost;
     }
 
     Graph () {
