@@ -16,6 +16,7 @@ size
 getGraphNodes
 setGraphNodes
 breadthFirst
+depthFirst
 flightDestination
 
 ### Graph Node
