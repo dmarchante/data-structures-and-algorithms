@@ -27,4 +27,4 @@ Set up the Node with the required variables
 - setNeighbors
 
 ## Whitboard
-![Graph Breadth First Whiteboard](./docs/assets/graphBreadthFirst-whiteboard.jpeg)
+![Graph Breadth First Whiteboard](./docs/assets/graphBreadthFirst-whiteboard.jpg)
