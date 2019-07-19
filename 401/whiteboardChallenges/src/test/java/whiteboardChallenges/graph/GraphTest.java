@@ -47,11 +47,11 @@ public class GraphTest {
     public void testGraph_breadthFirst() {
         ArrayList<String> nodeActual = graph.breadthFirst(graph.getGraphNodes().get(0));
         ArrayList<String> nodeExpected = new ArrayList<>();
-        nodeExpected.add("Naboo");
-        nodeExpected.add("Arendelle");
-        nodeExpected.add("Monstropolis");
-        nodeExpected.add("Metroville");
         nodeExpected.add("Pandora");
+        nodeExpected.add("Arendelle");
+        nodeExpected.add("Naboo");
+        nodeExpected.add("Metroville");
+        nodeExpected.add("Monstropolis");
         nodeExpected.add("Narnia");
 
         assertEquals(nodeExpected, nodeActual);
@@ -73,12 +73,12 @@ public class GraphTest {
     public void testGraph_depth() {
         ArrayList<String> nodeActual = graph.depthFirst(graph.getGraphNodes().get(0));
         ArrayList<String> nodeExpected = new ArrayList<>();
-        nodeExpected.add("Monstropolis");
         nodeExpected.add("Naboo");
+        nodeExpected.add("Metroville");
+        nodeExpected.add("Monstropolis");
+        nodeExpected.add("Narnia");
         nodeExpected.add("Pandora");
         nodeExpected.add("Arendelle");
-        nodeExpected.add("Metroville");
-        nodeExpected.add("Narnia");
 
         assertEquals(nodeExpected, nodeActual);
     }
